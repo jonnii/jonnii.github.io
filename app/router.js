@@ -7,6 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('resume');
+  this.route('github');
 });
 
 export default Router;

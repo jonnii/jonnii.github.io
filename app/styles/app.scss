@@ -36,6 +36,11 @@ header {
     li {
       display: inline;
     }
+
+    li + li::before {
+      content: " | ";
+      color: #404040;
+    }
   }
 }
 
