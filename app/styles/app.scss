@@ -14,6 +14,31 @@ h2 .sub {
   color: #808080;
 }
 
+header {
+  a {
+    color: white;
+  }
+
+  a:hover, a:focus {
+    color: white;
+    text-decoration: none;
+  }
+
+  .pages {
+    padding-top: 25px;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: inline;
+    }
+  }
+}
+
 hr {
   display: block;
   height: 1px;

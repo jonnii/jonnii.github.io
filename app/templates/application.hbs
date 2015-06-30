@@ -1,17 +1,25 @@
 <div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <h2 id="title">jonnii<span class="sub">.com</span></h2>
+
+  <header>
+    <div class="row">
+      <div class="col-md-6">
+        {{#link-to 'index'}}
+        <h2 id="title">jonnii<span class="sub">.com</span></h2>
+        {{/link-to}}
+      </div>
+      <div class="col-md-6">
+        <p class="text-right">
+          <ul class="pages">
+            <li>{{link-to 'resume' 'resume'}}</li>
+            <li>{{fa-icon 'github'}} github.com/jonnii</li>
+          </ul>
+        </p>
+      </div>
     </div>
-    <div class="col-md-6">
-      github
-    </div>
-  </div>
+  </header>
 
   <hr/>
 
-  <p>blogging is stupid</p>
-
-  {{outlet}}
+  {{liquid-outlet}}
 
 </div>
