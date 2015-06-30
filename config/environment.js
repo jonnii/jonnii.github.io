@@ -19,6 +19,16 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.contentSecurityPolicy = {
+    'default-src': "'self' 'unsafe-inline'",
+    'script-src': "'self' 'unsafe-inline' 'unsafe-eval'", // Allow scripts from https://cdn.mxpnl.com
+    'font-src': "'self' http://fonts.googleapis.com http://fonts.gstatic.com", // Allow fonts to be loaded from http://fonts.gstatic.com
+    'connect-src': "'self'", // Allow data (ajax/websocket) from api.mixpanel.com and custom-api.local
+    'img-src': "'self' 'unsafe-inline' 'unsafe-eval'",
+    'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com http://fonts.gstatic.com", // Allow inline styles and loaded CSS from http://fonts.googleapis.com
+    'media-src': "'self'"
+  }
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
